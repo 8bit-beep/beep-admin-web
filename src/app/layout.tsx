@@ -16,10 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="antialiased">
+      <body className="antialiased bg-greyscale-10">
         <LoadingBar color={colors.blue.light} />
-        <ModalProvider />
-        <BdsRegistry>{children}</BdsRegistry>
+        <BdsRegistry>
+          <ModalProvider />
+          {children}
+        </BdsRegistry>
       </body>
     </html>
   );
