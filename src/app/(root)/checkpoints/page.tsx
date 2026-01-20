@@ -1,12 +1,12 @@
-import { DUMMY_CHECKPOINT } from "@/entities/checkpoints/constants/dummy";
+import { CheckpointApi } from "@/entities/checkpoints/api";
 import CreateCheckpoint from "@/features/manageCheckpoint/ui/CreateCheckpoint";
 import ManageCheckpoint from "@/features/manageCheckpoint/ui/ManageCheckpoint";
 import CalendarIcon from "@/shared/icons/CalendarIcon";
 import Section from "@/widgets/section/ui/Section";
 import Table from "@/widgets/table/ui/Table";
 
-export default function CheckpointsPage() {
-  const data = [DUMMY_CHECKPOINT, DUMMY_CHECKPOINT, DUMMY_CHECKPOINT];
+export default async function CheckpointsPage() {
+  const { data } = await CheckpointApi.getCheckpoints();
 
   return (
     <Section
@@ -24,8 +24,8 @@ export default function CheckpointsPage() {
         ]}
         rows={data.map((checkpoint) => [
           checkpoint.name,
-          `${checkpoint.attendanceStartAt} ~ ${checkpoint.attendanceEndAt}`,
-          `${checkpoint.startAt} ~ ${checkpoint.endAt}`,
+          `${checkpoint.attendanceStartAt.slice(0, 5)} ~ ${checkpoint.attendanceEndAt.slice(0, 5)}`,
+          `${checkpoint.startAt.slice(0, 5)} ~ ${checkpoint.endAt.slice(0, 5)}`,
           "",
           <ManageCheckpoint key={checkpoint.id} data={checkpoint} />,
         ])}

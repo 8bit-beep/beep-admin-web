@@ -1,4 +1,4 @@
-import { DUMMY_ROOM } from "@/entities/rooms/constants/dummy";
+import { RoomApi } from "@/entities/rooms/api";
 import FilterRoom from "@/features/filter/ui/FilterRoom";
 import CreateRoom from "@/features/manageRoom/ui/CreateRoom";
 import ManageRoom from "@/features/manageRoom/ui/ManageRoom";
@@ -6,8 +6,8 @@ import LabIcon from "@/shared/icons/LabIcon";
 import Section from "@/widgets/section/ui/Section";
 import Table from "@/widgets/table/ui/Table";
 
-export default function HomePage() {
-  const data = [DUMMY_ROOM, DUMMY_ROOM, DUMMY_ROOM];
+export default async function HomePage() {
+  const { data } = await RoomApi.getRooms();
 
   return (
     <Section
@@ -27,7 +27,7 @@ export default function HomePage() {
           { title: "층" },
           { title: "", width: "202px" },
         ]}
-        rows={data.map((room) => [room.name, `${room.grade}-${room.classNumber}`, `${room.floor}층`, <ManageRoom key={room.id} data={room} />])}
+        rows={data.map((room) => [room.name, room.grade ? `${room.grade}-${room.classNumber}` : "--", `${room.floor}층`, <ManageRoom key={room.id} data={room} />])}
       />
     </Section>
   );

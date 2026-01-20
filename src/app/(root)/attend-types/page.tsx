@@ -1,12 +1,12 @@
-import { DUMMY_ATTEND_TYPE } from "@/entities/attend-types/constants/dummy";
+import { AttendTypeApi } from "@/entities/attend-types/api";
 import CreateAttendType from "@/features/manageAttendType/ui/CreateAttendType";
 import DeleteAttendType from "@/features/manageAttendType/ui/DeleteAttendType";
 import OkIcon from "@/shared/icons/OkIcon";
 import Section from "@/widgets/section/ui/Section";
 import Table from "@/widgets/table/ui/Table";
 
-export default function AttendTypesPage() {
-  const data = [DUMMY_ATTEND_TYPE, DUMMY_ATTEND_TYPE, DUMMY_ATTEND_TYPE];
+export default async function AttendTypesPage() {
+  const { data } = await AttendTypeApi.getAttendTypes();
 
   return (
     <Section

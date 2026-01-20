@@ -13,7 +13,7 @@ interface Props {
 }
 
 const UpdateStudentModal = ({ data }: Props) => {
-  const { day, setDay, filteredData } = useUpdateStudnet();
+  const { day, setDay, filteredData } = useUpdateStudnet(data.id);
 
   return (
     <div className="w-176 flex flex-col gap-5">
@@ -24,6 +24,7 @@ const UpdateStudentModal = ({ data }: Props) => {
           width={64}
           height={64}
           className="w-16 h-16 rounded-full"
+          loading="eager"
         />
         <div className="flex-1">
           <h3 className="text-h3">{data.username}</h3>

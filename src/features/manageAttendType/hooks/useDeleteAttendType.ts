@@ -1,5 +1,11 @@
+import { useDeleteAttendTypeMutation } from "@/entities/attend-types/mutations";
+
 export const useDeleteAttendType = (attendTypeId: number) => {
-  const deleteAttendType = async () => {};
- 
+  const { mutateAsync } = useDeleteAttendTypeMutation();
+
+  const deleteAttendType = async () => {
+    await mutateAsync(attendTypeId);
+  };
+
   return deleteAttendType;
-}
+};

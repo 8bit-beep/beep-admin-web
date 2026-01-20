@@ -1,12 +1,12 @@
-import { DUMMY_LIMITED_USER } from "@/entities/limited-users/constants/dummy";
+import { LimitedUserApi } from "@/entities/limited-users/api";
 import CreateLimitedUser from "@/features/manageLimitedUser/ui/CreateLimitedUser";
 import DeleteLimitedUser from "@/features/manageLimitedUser/ui/DeleteLimitedUser";
 import ExcludedIcon from "@/shared/icons/ExcludedIcon";
 import Section from "@/widgets/section/ui/Section";
 import Table from "@/widgets/table/ui/Table";
 
-export default function BlacklistsPage() {
-  const data = [DUMMY_LIMITED_USER, DUMMY_LIMITED_USER, DUMMY_LIMITED_USER];
+export default async function BlacklistsPage() {
+  const { data } = await LimitedUserApi.getLimitedUsers();
 
   return (
     <Section

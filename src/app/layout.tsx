@@ -3,6 +3,8 @@ import "./globals.css";
 import { BdsRegistry, ModalProvider } from "@bds-web/ui";
 import { LoadingBar } from "@cher1shrxd/loading";
 import { colors } from "@bds-web/colors";
+import QueryProvider from "@/shared/provider/QueryProvider";
+import { ToastContainer } from "@cher1shrxd/toast";
 
 export const metadata: Metadata = {
   title: "삑 어드민",
@@ -18,9 +20,12 @@ export default function RootLayout({
     <html lang="ko">
       <body className="antialiased bg-greyscale-10">
         <LoadingBar color={colors.blue.light} />
+        <ToastContainer />
         <BdsRegistry>
-          <ModalProvider />
-          {children}
+          <QueryProvider>
+            <ModalProvider />
+            {children}
+          </QueryProvider>
         </BdsRegistry>
       </body>
     </html>

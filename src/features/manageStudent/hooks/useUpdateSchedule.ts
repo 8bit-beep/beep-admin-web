@@ -1,11 +1,12 @@
 import { DUMMY_ATTEND_TYPE } from "@/entities/attend-types/constants/dummy";
-import { DUMMY_ROOM } from "@/entities/rooms/constants/dummy";
+import { useGetRooms } from "@/entities/rooms/queries";
+import { useUpdateScheduleMutation } from "@/entities/schedules/mutations";
 import { Schedule } from "@/entities/schedules/types";
 import { DropdownItem } from "@bds-web/ui";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useUpdateSchedule = (data: Schedule) => {
-  const rooms = [DUMMY_ROOM, DUMMY_ROOM, DUMMY_ROOM];
+  const rooms = useGetRooms().data.data;
   const types = [DUMMY_ATTEND_TYPE, DUMMY_ATTEND_TYPE, DUMMY_ATTEND_TYPE];
 
   const roomOptions = rooms.map((room) => ({
@@ -26,6 +27,19 @@ export const useUpdateSchedule = (data: Schedule) => {
 
   const [room, setRoom] = useState<DropdownItem | null>(initRoom);
   const [type, setType] = useState<DropdownItem | null>(initType);
+
+  const { mutateAsync } = useUpdateScheduleMutation(data.id);
+
+  useEffect(() => {
+    if (!room || !type) return;
+    mutateAsync({
+      id: data.id,
+      checkpoint: data.checkpoint,
+      dayOfWeek: data.dayOfWeek,
+      roomId: Number(room.value),
+      typeId: Number(type.value),
+    });
+  }, [room, type]);
 
   return {
     rooms,

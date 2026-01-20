@@ -1,12 +1,21 @@
-import { DUMMY_STUDENT } from "@/entities/students/constants/dummy";
+import { StudentApi } from "@/entities/students/api";
 import FilterStudent from "@/features/filter/ui/FilterStudent";
 import ManageStudent from "@/features/manageStudent/ui/ManageStudent";
 import PersonIcon from "@/shared/icons/PersonIcon";
+import { SearchParams } from "@/shared/types/search-params";
 import Section from "@/widgets/section/ui/Section";
 import Table from "@/widgets/table/ui/Table";
 
-export default function StudentsPage() {
-  const data = [DUMMY_STUDENT, DUMMY_STUDENT, DUMMY_STUDENT];
+export default async function StudentsPage({
+  searchParams,
+}: SearchParams<{ grade: string; classNumber: string; page: string }>) {
+  const { grade, classNumber, page } = await searchParams;
+  const { data } = await StudentApi.getStudents(
+    Number(grade),
+    Number(classNumber),
+    Number(page),
+    10,
+  );
 
   return (
     <Section
@@ -21,7 +30,7 @@ export default function StudentsPage() {
           { title: "이메일" },
           { title: "", width: "240px" },
         ]}
-        rows={data.map((student) => [
+        rows={data.data.map((student) => [
           `${student.studentInfo.grade}${student.studentInfo.classNumber}${student.studentInfo.num}`,
           student.username,
           student.email,

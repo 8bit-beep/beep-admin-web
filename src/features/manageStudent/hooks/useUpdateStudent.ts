@@ -1,11 +1,12 @@
 import { SegmentItem } from "@/shared/types/segment-item";
 import { useState } from "react";
 import { DAYS } from "../constants/days";
-import { DUMMY_SCHEDULE } from "@/entities/schedules/constants/dummy";
+import { useGetSchedulesByUserId } from "@/entities/schedules/queries";
 
-export const useUpdateStudnet = () => {
+export const useUpdateStudnet = (userId: number) => {
   const [day, setDay] = useState<SegmentItem>(DAYS[0]);
-  const data = [DUMMY_SCHEDULE, DUMMY_SCHEDULE, DUMMY_SCHEDULE];
+  const { data: res } = useGetSchedulesByUserId(userId);
+  const { data } = res; 
   const filteredData =
     day.value === "ALL"
       ? data

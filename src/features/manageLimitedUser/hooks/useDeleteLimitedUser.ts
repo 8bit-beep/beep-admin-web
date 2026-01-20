@@ -1,5 +1,11 @@
+import { useDeleteLimitedUserMutation } from "@/entities/limited-users/mutations";
+
 export const useDeleteLimitedUser = (limitedUserId: number) => {
-  const deleteLimitedUser = async () => {};
+  const { mutateAsync } = useDeleteLimitedUserMutation();
+
+  const deleteLimitedUser = async () => {
+    await mutateAsync(limitedUserId);
+  };
 
   return deleteLimitedUser;
 };
