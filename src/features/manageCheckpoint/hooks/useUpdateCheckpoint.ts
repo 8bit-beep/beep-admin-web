@@ -14,7 +14,7 @@ export const useUpdateCheckpoint = (data: Checkpoint) => {
     !attendanceStartAt.trim() ||
     !attendanceEndAt.trim();
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (disabled) return;
   };

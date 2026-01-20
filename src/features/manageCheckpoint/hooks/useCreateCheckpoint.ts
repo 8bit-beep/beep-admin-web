@@ -9,7 +9,7 @@ export const useCreateCheckpoint = () => {
 
   const disabled = !name.trim() || !startAt.trim() || !endAt.trim() || !attendanceStartAt.trim() || !attendanceEndAt.trim();
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (disabled) return;
   };
