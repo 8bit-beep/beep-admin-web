@@ -10,19 +10,25 @@ interface Props {
 }
 
 const ScheduleItem = ({ data }: Props) => {
-  const { setRoom, room, options } = useUpdateSchedule(data);
+  const { setRoom, room, roomOptions, setType, type, typeOptions } =
+    useUpdateSchedule(data);
 
   return (
-    <div
-      key={data.id}
-      className="w-full h-11 flex items-center justify-between">
-      <span className="text-h4">
+    <div key={data.id} className="w-full h-11 flex items-center gap-2">
+      <span className="text-h4 flex-1">
         {parseDay(data.dayOfWeek)} {data.checkpoint.name}
       </span>
+
       <Dropdown
         onSelect={setRoom}
-        options={options}
+        options={roomOptions}
         selected={room}
+        dropdownSize="small"
+      />
+      <Dropdown
+        onSelect={setType}
+        options={typeOptions}
+        selected={type}
         dropdownSize="small"
       />
     </div>
