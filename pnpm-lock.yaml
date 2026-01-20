@@ -21,8 +21,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@bds-web/ui':
-        specifier: ^1.15.0
-        version: 1.15.0(8ff69d366277e0ad2f75b43616cdbe4a)
+        specifier: ^1.16.0
+        version: 1.16.0(8ff69d366277e0ad2f75b43616cdbe4a)
       '@cher1shrxd/loading':
         specifier: ^1.0.3
         version: 1.0.3(next@16.1.3(@babel/core@7.28.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(zustand@5.0.10(@types/react@19.2.8)(react@19.2.3))
@@ -170,8 +170,8 @@ packages:
       react: '>=19'
       react-dom: '>=19'
 
-  '@bds-web/ui@1.15.0':
-    resolution: {integrity: sha512-8RkD2g5NHwHGDeoRLn9WGiAfekxVrbUCQLyCt+4Q2XQQ/K8Y31moi6uW0Ri4im23i5PZoOZj1vBLC/nGagPW6w==}
+  '@bds-web/ui@1.16.0':
+    resolution: {integrity: sha512-lo566h2dzc+Ociob/s2z+iTfU89FEdEWz8yfiCLnVf6ykDVmGHL2asLRDjYvkFLBW1BTbGdm6EF4ZTytqBHEAg==}
     peerDependencies:
       '@bds-web/colors': ^1.1.0
       '@bds-web/shapes': ^1.1.0
@@ -2244,7 +2244,7 @@ snapshots:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 
-  '@bds-web/ui@1.15.0(8ff69d366277e0ad2f75b43616cdbe4a)':
+  '@bds-web/ui@1.16.0(8ff69d366277e0ad2f75b43616cdbe4a)':
     dependencies:
       '@bds-web/colors': 1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@bds-web/shapes': 1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)

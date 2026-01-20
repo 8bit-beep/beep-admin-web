@@ -1,6 +1,6 @@
 import { DUMMY_CHECKPOINT } from "@/entities/checkpoints/constants/dummy";
-import CreateCheckpoint from "@/features/manageCheckpoints/ui/CreateCheckpoint";
-import ManageCheckpoint from "@/features/manageCheckpoints/ui/ManageCheckpoint";
+import CreateCheckpoint from "@/features/manageCheckpoint/ui/CreateCheckpoint";
+import ManageCheckpoint from "@/features/manageCheckpoint/ui/ManageCheckpoint";
 import CalendarIcon from "@/shared/icons/CalendarIcon";
 import Section from "@/widgets/section/ui/Section";
 import Table from "@/widgets/table/ui/Table";
