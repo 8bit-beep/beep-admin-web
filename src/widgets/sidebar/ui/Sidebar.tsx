@@ -32,7 +32,7 @@ const Sidebar = () => {
         <Image src="/logo.svg" width={47} height={43} alt="삑" />
       </Link>
       <nav className="w-full flex flex-col items-start">
-        <h2 className="text-greyscale-50 my-0.75 text-caption2">관리 메뉴</h2>
+        <h2 className="text-greyscale-60 my-0.75 text-caption2">관리 메뉴</h2>
         {ROUTES.map(({ label, path, icon }) => (
           <NavItem icon={icon} label={label} path={path} key={path} />
         ))}
