@@ -11,9 +11,15 @@ export const useUpdateRoom = (data: Room) => {
     value: `${data.floor}`,
   });
   const [classNumber, setClassNumber] = useState<DropdownItem | null>(
-    INCLUDE_NONE.find(
-      (item) => item.value === `${data.grade}-${data.classNumber}`,
-    ) || INCLUDE_NONE[0],
+    !!data.grade
+      ? {
+          name: `${data.grade}-${data.classNumber}`,
+          value: `${data.grade}-${data.classNumber}`,
+        }
+      : {
+          name: "선택 안함",
+          value: "none",
+        },
   );
   const disabled = !name.trim();
 
