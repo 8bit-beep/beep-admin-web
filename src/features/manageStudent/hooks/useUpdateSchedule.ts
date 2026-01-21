@@ -1,4 +1,4 @@
-import { DUMMY_ATTEND_TYPE } from "@/entities/attend-types/constants/dummy";
+import { useGetAttendTypes } from "@/entities/attend-types/queries";
 import { useGetRooms } from "@/entities/rooms/queries";
 import { useUpdateScheduleMutation } from "@/entities/schedules/mutations";
 import { Schedule } from "@/entities/schedules/types";
@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 export const useUpdateSchedule = (data: Schedule) => {
   const rooms = useGetRooms().data.data;
-  const types = [DUMMY_ATTEND_TYPE, DUMMY_ATTEND_TYPE, DUMMY_ATTEND_TYPE];
+  const types = useGetAttendTypes().data.data;
 
   const roomOptions = rooms.map((room) => ({
     name: room.name,
