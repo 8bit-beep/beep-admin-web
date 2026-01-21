@@ -3,15 +3,8 @@ import { Student } from "../types";
 import { PageResponse } from "@/shared/types/page-response";
 
 export const StudentApi = {
-  getStudents: async (grade: number, classNumber: number, page: number, size: number) => {
-    return await api.get<PageResponse<Student>>("/students", {
-      params: {
-        grade,
-        classNumber,
-        page,
-        size,
-      },
-    });
+  getStudents: async (grade: number, classNumber: number) => {
+    return (await api.get<PageResponse<Student>>(`/students?grade=${grade}&classNumber=${classNumber}`));
   },
 
   deleteStudent: async (studentId: number) => {

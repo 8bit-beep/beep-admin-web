@@ -36,7 +36,7 @@ export default async function HomePage({
         rows={data.map((room) => [
           room.name,
           room.grade ? `${room.grade}-${room.classNumber}` : "--",
-          `${room.floor}층`,
+          room.floor ? `${room.floor}층` : "실습동 외",
           <ManageRoom key={room.id} data={room} />,
         ])}
       />

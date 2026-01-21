@@ -3,18 +3,17 @@ import FilterStudent from "@/features/filter/ui/FilterStudent";
 import ManageStudent from "@/features/manageStudent/ui/ManageStudent";
 import PersonIcon from "@/shared/icons/PersonIcon";
 import { SearchParams } from "@/shared/types/search-params";
+import { pad } from "@/shared/utils/pad";
 import Section from "@/widgets/section/ui/Section";
 import Table from "@/widgets/table/ui/Table";
 
 export default async function StudentsPage({
   searchParams,
 }: SearchParams<{ grade?: string; classNumber?: string; page?: string }>) {
-  const { grade, classNumber, page } = await searchParams;
+  const { grade, classNumber } = await searchParams;
   const { data } = await StudentApi.getStudents(
-    Number(grade),
-    Number(classNumber),
-    Number(page),
-    10,
+    Number(grade || 1),
+    Number(classNumber || 1),
   );
 
   return (
@@ -30,8 +29,8 @@ export default async function StudentsPage({
           { title: "이메일" },
           { title: "", width: "240px" },
         ]}
-        rows={data.data.map((student) => [
-          `${student.studentInfo.grade}${student.studentInfo.classNumber}${student.studentInfo.num}`,
+        rows={data.content.map((student) => [
+          `${student.studentInfo.grade}${student.studentInfo.classNumber}${pad(student.studentInfo.num, 2)}`,
           student.username,
           student.email,
           <ManageStudent key={student.id} data={student} />,

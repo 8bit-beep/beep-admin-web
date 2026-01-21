@@ -7,9 +7,12 @@ import { useUpdateRoomMutation } from "@/entities/rooms/mutations";
 export const useUpdateRoom = (data: Room) => {
   const INCLUDE_NONE = [{ name: "선택 안함", value: "none" }, ...CLASS_OPTIONS];
   const [name, setName] = useState(data.name);
-  const [floor, setFloor] = useState<DropdownItem | null>({
+  const [floor, setFloor] = useState<DropdownItem | null>(data.floor ? {
     name: `${data.floor}층`,
     value: `${data.floor}`,
+  } : {
+    name: "실습동 외",
+    value: "others",
   });
   const [classNumber, setClassNumber] = useState<DropdownItem | null>(
     !!data.grade

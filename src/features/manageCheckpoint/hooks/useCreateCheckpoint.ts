@@ -1,3 +1,4 @@
+import { useCreateCheckpointMutation } from "@/entities/checkpoints/mutations";
 import { FormEvent, useState } from "react";
 
 export const useCreateCheckpoint = () => {
@@ -7,11 +8,24 @@ export const useCreateCheckpoint = () => {
   const [attendanceStartAt, setAttendanceStartAt] = useState("");
   const [attendanceEndAt, setAttendanceEndAt] = useState("");
 
-  const disabled = !name.trim() || !startAt.trim() || !endAt.trim() || !attendanceStartAt.trim() || !attendanceEndAt.trim();
+  const { mutateAsync, isPending } = useCreateCheckpointMutation();
+  const disabled = !name.trim() || !startAt.trim() || !endAt.trim() || !attendanceStartAt.trim() || !attendanceEndAt.trim() || isPending;
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (disabled) return;
+    await mutateAsync({
+      name,
+      startAt,
+      endAt,
+      attendanceStartAt,
+      attendanceEndAt,
+    });
+    setName("");
+    setStartAt("");
+    setEndAt("");
+    setAttendanceStartAt("");
+    setAttendanceEndAt("");
   };
 
   return {

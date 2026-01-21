@@ -32,6 +32,7 @@ export const useUpdateSchedule = (data: Schedule) => {
 
   useEffect(() => {
     if (!room || !type) return;
+    if(room.value === data.room.id?.toString() && type.value === data.type.id?.toString()) return;
     mutateAsync({
       id: data.id,
       checkpoint: data.checkpoint,

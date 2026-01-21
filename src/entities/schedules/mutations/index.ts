@@ -11,14 +11,12 @@ export const useUpdateScheduleMutation = (userId: number) => {
     onSuccess: async () => {
       await queryClient.invalidateQueries({ queryKey: ["schedules", userId] });
       toast.success("스케쥴 수정 성공", "스케쥴이 성공적으로 수정되었습니다.");
-      modal.closeAll();
     },
     onError: () => {
       toast.error(
         "스케쥴 수정 실패",
         "스케쥴 수정에 실패했습니다. 다시 시도해주세요.",
       );
-      modal.closeAll();
     },
   });
 };

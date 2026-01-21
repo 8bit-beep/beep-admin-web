@@ -9,7 +9,7 @@ export const useDeleteStudentMutation = (studentId: number) => {
   const router = useRouter();
 
   return useMutation({
-    mutationFn: () => StudentApi.deleteStudent(studentId),
+    mutationFn: async () => await StudentApi.deleteStudent(studentId),
     onSuccess: () => {
       router.refresh();
       toast.success("학생 삭제 성공", "학생이 성공적으로 삭제되었습니다.");

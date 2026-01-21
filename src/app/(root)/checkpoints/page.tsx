@@ -24,8 +24,8 @@ export default async function CheckpointsPage() {
         ]}
         rows={data.map((checkpoint) => [
           checkpoint.name,
-          `${checkpoint.attendanceStartAt.slice(0, 5)} ~ ${checkpoint.attendanceEndAt.slice(0, 5)}`,
           `${checkpoint.startAt.slice(0, 5)} ~ ${checkpoint.endAt.slice(0, 5)}`,
+          `${checkpoint.attendanceStartAt.slice(0, 5)} ~ ${checkpoint.attendanceEndAt.slice(0, 5)}`,
           "",
           <ManageCheckpoint key={checkpoint.id} data={checkpoint} />,
         ])}
