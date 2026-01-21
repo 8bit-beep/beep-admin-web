@@ -3,11 +3,17 @@ import FilterRoom from "@/features/filter/ui/FilterRoom";
 import CreateRoom from "@/features/manageRoom/ui/CreateRoom";
 import ManageRoom from "@/features/manageRoom/ui/ManageRoom";
 import LabIcon from "@/shared/icons/LabIcon";
+import { SearchParams } from "@/shared/types/search-params";
 import Section from "@/widgets/section/ui/Section";
 import Table from "@/widgets/table/ui/Table";
 
-export default async function HomePage() {
-  const { data } = await RoomApi.getRooms();
+export default async function HomePage({
+  searchParams,
+}: SearchParams<{ floor?: string }>) {
+  const { floor } = await searchParams;
+  const floorParam =
+    floor === "others" ? "4" : floor === "all" ? undefined : floor;
+  const { data } = await RoomApi.getRooms(floorParam);
 
   return (
     <Section
@@ -27,7 +33,12 @@ export default async function HomePage() {
           { title: "층" },
           { title: "", width: "202px" },
         ]}
-        rows={data.map((room) => [room.name, room.grade ? `${room.grade}-${room.classNumber}` : "--", `${room.floor}층`, <ManageRoom key={room.id} data={room} />])}
+        rows={data.map((room) => [
+          room.name,
+          room.grade ? `${room.grade}-${room.classNumber}` : "--",
+          `${room.floor}층`,
+          <ManageRoom key={room.id} data={room} />,
+        ])}
       />
     </Section>
   );

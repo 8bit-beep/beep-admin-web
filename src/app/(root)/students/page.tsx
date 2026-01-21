@@ -8,7 +8,7 @@ import Table from "@/widgets/table/ui/Table";
 
 export default async function StudentsPage({
   searchParams,
-}: SearchParams<{ grade: string; classNumber: string; page: string }>) {
+}: SearchParams<{ grade?: string; classNumber?: string; page?: string }>) {
   const { grade, classNumber, page } = await searchParams;
   const { data } = await StudentApi.getStudents(
     Number(grade),
