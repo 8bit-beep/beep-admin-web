@@ -6,7 +6,7 @@ export async function POST() {
   const refreshToken = cookieStore.get("refreshToken")?.value;
 
   if (!refreshToken) {
-    return NextResponse.json({}, { status: 401 });
+    return NextResponse.redirect(new URL("/login", process.env.NEXT_PUBLIC_WEB_URL!));
   }
 
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/refresh`, {
@@ -16,7 +16,7 @@ export async function POST() {
   });
 
   if (!res.ok) {
-    return NextResponse.json({}, { status: 401 });
+    return NextResponse.redirect(new URL("/login", process.env.NEXT_PUBLIC_WEB_URL!));
   }
 
   const { accessToken, refreshToken: newRefresh } = await res.json();

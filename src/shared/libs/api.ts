@@ -1,16 +1,5 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
-
-const getAccessToken = async (): Promise<string | undefined> => {
-  if (typeof window !== "undefined") {
-    return document.cookie
-      .split("; ")
-      .find((c) => c.startsWith("accessToken="))
-      ?.split("=")[1];
-  }
-
-  const { cookies } = await import("next/headers");
-  return (await cookies()).get("accessToken")?.value;
-};
+import { getAccessToken } from "./cookie";
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
