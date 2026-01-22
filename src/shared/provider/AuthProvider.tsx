@@ -9,7 +9,7 @@ const AuthProvider = () => {
 
   const getToken = async () => {
     const accessToken = await getAccessToken();
-    if (!accessToken && typeof window !== "undefined" && !pathname.startsWith("/callback") && pathname !== "/login") {
+    if (!accessToken && typeof window !== "undefined") {
       window.location.href = "/login";
     }
   };
