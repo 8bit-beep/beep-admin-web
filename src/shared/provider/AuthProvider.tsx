@@ -5,7 +5,7 @@ import { getAccessToken } from "../libs/cookie";
 const AuthProvider = () => {
   const getToken = async () => {
     const accessToken = await getAccessToken();
-    if (!accessToken) {
+    if (!accessToken && typeof window !== "undefined") {
       window.location.href = "/login";
     }
   };
