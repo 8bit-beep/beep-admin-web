@@ -1,7 +1,7 @@
 "use client";
 
 import SearchIcon from "@/shared/icons/SearchIcon";
-import { useSearch } from "../model/useSearch";
+import { useSearch } from "../hooks/useSearch";
 
 const SearchBar = () => {
   const { query, onChange, onEnter } = useSearch();
