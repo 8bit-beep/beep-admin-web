@@ -29,7 +29,7 @@ export default async function StudentsPage({
           { title: "이메일" },
           { title: "", width: "240px" },
         ]}
-        rows={data.content.map((student) => [
+        rows={data.map((student) => [
           `${student.studentInfo.grade}${student.studentInfo.classNumber}${pad(student.studentInfo.num, 2)}`,
           student.username,
           student.email,
