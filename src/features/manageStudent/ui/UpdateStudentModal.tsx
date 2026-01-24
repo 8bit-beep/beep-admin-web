@@ -2,7 +2,7 @@
 
 import { Student } from "@/entities/students/types";
 import Segment from "@/shared/ui/Segment";
-import { Button } from "@bds-web/ui";
+import { Button, modal } from "@bds-web/ui";
 import Image from "next/image";
 import { DAYS } from "../constants/days";
 import ScheduleItem from "./ScheduleItem";
@@ -49,7 +49,7 @@ const UpdateStudentModal = ({ data }: Props) => {
             </p>
           )}
         </div>
-        <Button buttonSize="large" buttonType="primary">
+        <Button buttonSize="large" buttonType="primary" onClick={() => modal.close()}>
           수정 완료
         </Button>
       </section>
