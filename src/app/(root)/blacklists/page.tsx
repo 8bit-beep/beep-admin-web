@@ -1,6 +1,6 @@
 import { LimitedUserApi } from "@/entities/limited-users/api";
-import CreateLimitedUser from "@/features/manageLimitedUser/ui/CreateLimitedUser";
-import DeleteLimitedUser from "@/features/manageLimitedUser/ui/DeleteLimitedUser";
+import CreateLimitedUser from "@/features/manage-limited-users/ui/CreateLimitedUser";
+import DeleteLimitedUser from "@/features/manage-limited-users/ui/DeleteLimitedUser";
 import ExcludedIcon from "@/shared/icons/ExcludedIcon";
 import Section from "@/widgets/section/ui/Section";
 import Table from "@/widgets/table/ui/Table";

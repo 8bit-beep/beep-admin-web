@@ -1,6 +1,6 @@
 import { CheckpointApi } from "@/entities/checkpoints/api";
-import CreateCheckpoint from "@/features/manageCheckpoint/ui/CreateCheckpoint";
-import ManageCheckpoint from "@/features/manageCheckpoint/ui/ManageCheckpoint";
+import CreateCheckpoint from "@/features/manage-checkpoints/ui/CreateCheckpoint";
+import ManageCheckpoint from "@/features/manage-checkpoints/ui/ManageCheckpoint";
 import CalendarIcon from "@/shared/icons/CalendarIcon";
 import Section from "@/widgets/section/ui/Section";
 import Table from "@/widgets/table/ui/Table";

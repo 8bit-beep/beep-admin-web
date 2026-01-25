@@ -1,7 +1,7 @@
 import { RoomApi } from "@/entities/rooms/api";
 import FilterRoom from "@/features/filter/ui/FilterRoom";
-import CreateRoom from "@/features/manageRoom/ui/CreateRoom";
-import ManageRoom from "@/features/manageRoom/ui/ManageRoom";
+import CreateRoom from "@/features/manage-rooms/ui/CreateRoom";
+import ManageRoom from "@/features/manage-rooms/ui/ManageRoom";
 import LabIcon from "@/shared/icons/LabIcon";
 import { SearchParams } from "@/shared/types/search-params";
 import Section from "@/widgets/section/ui/Section";

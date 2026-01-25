@@ -1,6 +1,6 @@
 import { StudentApi } from "@/entities/students/api";
 import FilterStudent from "@/features/filter/ui/FilterStudent";
-import ManageStudent from "@/features/manageStudent/ui/ManageStudent";
+import ManageStudent from "@/features/manage-students/ui/ManageStudent";
 import PersonIcon from "@/shared/icons/PersonIcon";
 import { SearchParams } from "@/shared/types/search-params";
 import { pad } from "@/shared/utils/pad";

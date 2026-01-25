@@ -1,6 +1,6 @@
 import { AttendTypeApi } from "@/entities/attend-types/api";
-import CreateAttendType from "@/features/manageAttendType/ui/CreateAttendType";
-import DeleteAttendType from "@/features/manageAttendType/ui/DeleteAttendType";
+import CreateAttendType from "@/features/manage-attend-types/ui/CreateAttendType";
+import DeleteAttendType from "@/features/manage-attend-types/ui/DeleteAttendType";
 import OkIcon from "@/shared/icons/OkIcon";
 import Section from "@/widgets/section/ui/Section";
 import Table from "@/widgets/table/ui/Table";
