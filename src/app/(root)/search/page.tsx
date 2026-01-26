@@ -22,7 +22,7 @@ export default async function SearchPage({ searchParams }: SearchParams<{ query?
   ]);
 
   return (
-    <div className="flex-1 flex flex-col gap-8 overflow-y-auto">
+    <div className="w-full h-full flex flex-col gap-8 overflow-y-auto">
       <h2 className="text-h2">검색 결과</h2>
 
       <section>
