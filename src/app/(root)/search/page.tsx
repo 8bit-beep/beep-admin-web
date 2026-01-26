@@ -9,6 +9,7 @@ import ManageStudent from "@/features/manage-students/ui/ManageStudent";
 import ManageCheckpoint from "@/features/manage-checkpoints/ui/ManageCheckpoint";
 import DeleteLimitedUser from "@/features/manage-limited-users/ui/DeleteLimitedUser";
 import ManageRoom from "@/features/manage-rooms/ui/ManageRoom";
+import DeleteAttendType from "@/features/manage-attend-types/ui/DeleteAttendType";
 
 export default async function SearchPage({ searchParams }: SearchParams<{ query?: string }>) {
   const { query } = await searchParams;
@@ -21,7 +22,7 @@ export default async function SearchPage({ searchParams }: SearchParams<{ query?
   ]);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex-1 flex flex-col gap-8 overflow-y-auto">
       <h2 className="text-h2">검색 결과</h2>
 
       <section>
@@ -31,6 +32,7 @@ export default async function SearchPage({ searchParams }: SearchParams<{ query?
             {attendTypes.map((type) => (
               <li key={type.id} className="flex items-center gap-2 p-2 bg-greyscale-10 rounded">
                 <span className="flex-1">{type.name}</span>
+                <DeleteAttendType key={type.id} attendTypeId={type.id} />
               </li>
             ))}
           </ul>
