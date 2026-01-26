@@ -10,6 +10,15 @@ export const RoomApi = {
     return { data };
   },
 
+  searchRooms: async (query?: string) => {
+    if (!query) {
+      return [];
+    }
+    return (await api.get<Room[]>("/rooms")).data.filter((room) =>
+      room.name.toLowerCase().includes(query.toLowerCase()),
+    );
+  },
+
   createRoom: async (data: Omit<Room, "id">) => {
     return await api.post("/rooms", data);
   },

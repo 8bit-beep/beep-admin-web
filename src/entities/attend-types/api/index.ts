@@ -6,6 +6,15 @@ export const AttendTypeApi = {
     return await api.get<AttendType[]>("/types");
   },
 
+  searchAttendTypes: async (query?: string) => {
+    if (!query) {
+      return [];
+    }
+    return (await api.get<AttendType[]>("/types")).data.filter((type) =>
+      type.name.toLowerCase().includes(query.toLowerCase()),
+    );
+  },
+
   createAttendType: async (data: Omit<AttendType, "id">) => {
     return await api.post("/types", data);
   },

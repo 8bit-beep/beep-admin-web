@@ -6,6 +6,15 @@ export const CheckpointApi = {
     return await api.get<Checkpoint[]>("/checkpoints");
   },
 
+  searchCheckpoints: async (query?: string) => {
+    if (!query) {
+      return [];
+    }
+    return (await api.get<Checkpoint[]>("/checkpoints")).data.filter((checkpoint) =>
+      checkpoint.name.toLowerCase().includes(query.toLowerCase()),
+    );
+  },
+
   createCheckpoint: async (data: Omit<Checkpoint, "id">) => {
     return await api.post<Checkpoint>("/checkpoints", data);
   },
