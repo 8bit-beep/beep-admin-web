@@ -34,7 +34,7 @@ const UpdateCheckpointModal = ({ data }: Props) => {
         onChange={(e) => setName(e.target.value)}
       />
       <div className="space-y-1">
-        <span className="text-caption1 text-static-black">출석 시간 설정</span>
+        <span className="text-caption1 text-static-black">체크포인트 기간 설정</span>
         <div className="w-full flex items-center justify-between">
           <TextInput
             placeholder="HH:MM"
@@ -53,7 +53,7 @@ const UpdateCheckpointModal = ({ data }: Props) => {
       </div>
       <div className="space-y-1">
         <span className="text-caption1 text-static-black">
-          체크포인트 시간 설정
+          출석 가능 기간 설정
         </span>
         <div className="w-full flex items-center justify-between">
           <TextInput

@@ -17,8 +17,8 @@ export default async function CheckpointsPage() {
       <Table
         header={[
           { title: "체크포인트 이름", width: "202px" },
-          { title: "출석 시간", width: "202px" },
-          { title: "체크포인트 시간", width: "202px" },
+          { title: "체크포인트 기간", width: "202px" },
+          { title: "출석 가능 기간", width: "202px" },
           { title: "" },
           { title: "", width: "202px" },
         ]}
