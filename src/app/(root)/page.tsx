@@ -28,12 +28,14 @@ export default async function HomePage({
       }>
       <Table
         header={[
+          { title: "번호", width: "144px" },
           { title: "실 이름", width: "144px" },
           { title: "사용 학반", width: "202px" },
           { title: "층" },
           { title: "", width: "202px" },
         ]}
         rows={data.map((room) => [
+          room.id,
           room.name,
           room.grade ? `${room.grade}-${room.classNumber}` : "--",
           room.floor ? `${room.floor}층` : "실습동 외",
