@@ -14,6 +14,7 @@ export const useCreateRoomMutation = () => {
     onSuccess: () => {
       router.refresh();
       toast.success("실 생성 성공", "실이 성공적으로 생성되었습니다.");
+      modal.closeAll();
     },
     onError: (error: AxiosError<Error>) => {
       toast.error(
