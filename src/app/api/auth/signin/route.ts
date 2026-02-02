@@ -18,12 +18,10 @@ export async function POST(req: NextRequest) {
 
     cookieStore.set("accessToken", res.data.accessToken, {
       path: "/",
-      domain: process.env.NEXT_PUBLIC_COOKIE_DOMAIN || ".8beep.site",
     });
 
     cookieStore.set("refreshToken", res.data.refreshToken, {
       path: "/",
-      domain: process.env.NEXT_PUBLIC_COOKIE_DOMAIN || ".8beep.site",
     });
 
     return NextResponse.json({ accessToken: res.data.accessToken });
