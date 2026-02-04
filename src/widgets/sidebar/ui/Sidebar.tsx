@@ -22,7 +22,7 @@ const Sidebar = () => {
   return (
     <>
       {/* 사이드바 */}
-      <aside className="hidden lg:flex w-[15%] min-w-45 max-w-70 h-screen bg-static-white shadow-modal px-5.5 py-13.75 flex-col items-center gap-9">
+      <aside className="hidden xl:flex w-[15%] min-w-45 max-w-70 h-screen bg-static-white shadow-modal px-5.5 py-13.75 flex-col items-center gap-9">
         <Link href="/">
           <Image src="/logo.svg" loading="eager" width={47} height={43} alt="삑" />
         </Link>
@@ -50,7 +50,7 @@ const Sidebar = () => {
 
       {/* 하단바 */}
       <nav
-        className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-static-white shadow-modal flex justify-evenly items-center px-4 py-2"
+        className="fixed bottom-0 left-0 right-0 z-50 xl:hidden bg-static-white shadow-modal flex justify-evenly items-center px-4 py-2"
         style={{ height: 70 }}
       >
         {ROUTES.map(({ label, path, icon }) => (
