@@ -24,7 +24,11 @@ export default function RootLayout({
         <BdsRegistry>
           <QueryProvider>
             <ModalProvider />
-            {children}
+            
+            <div className="pt-[60px] lg:pt-0">
+              {children}
+            </div>
+
           </QueryProvider>
         </BdsRegistry>
       </body>

@@ -78,3 +78,16 @@
   user-select: none;
   font-family: "Pretendard", sans-serif;
 }
+@media (max-width: 1023px) {
+  #__next {
+    padding-bottom: 56px !important;
+  }
+}
+@media (max-width: 1023px) {
+  main {
+    padding-bottom: 90px !important; 
+    box-sizing: border-box;
+  }
+}
+
+
