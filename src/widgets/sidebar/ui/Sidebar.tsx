@@ -35,7 +35,7 @@ const Sidebar = () => {
         </nav>
       </aside>
 
-      <div className="fixed top-10 left-10 right-0 z-50 lg:hidden px-4">
+      <div className="fixed top-10 left-10 right-0 z-50 xl:hidden px-4">
         <div className="flex items-center gap-3">
           <Link href="/">
             <Image src="/logo.svg" loading="eager" width={42} height={38} alt="삑" />

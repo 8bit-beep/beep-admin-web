@@ -13,7 +13,7 @@ const SearchBar = ({ onlyMobile }: SearchBarProps) => {
   return (
     <div
       className={`w-full h-11 bg-static-white rounded-large shadow-modal flex items-center px-5 gap-3 ${
-        onlyMobile ? "flex lg:hidden" : "hidden lg:flex"
+        onlyMobile ? "flex xl:hidden" : "hidden xl:flex"
       }`}
     >
       <SearchIcon className="m-1.75 text-greyscale-40" />

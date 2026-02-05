@@ -25,7 +25,7 @@ export default function RootLayout({
           <QueryProvider>
             <ModalProvider />
             
-            <div className="pt-[60px] lg:pt-0">
+            <div className="pt-[60px] xl:pt-0">
               {children}
             </div>
 
