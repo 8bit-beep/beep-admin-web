@@ -9,7 +9,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
     <div className="w-full h-svh flex items-start flex-col xl:flex-row overflow-hidden">
       <Sidebar />
       <Header />
-      <main className="w-full flex-1 h-[calc(100%-147px)] xl:h-full px-[70px] xl:px-13 pb-1 xl:pb-5 flex flex-col gap-4.5 overflow-y-auto">
+      <main className="w-full flex-1 h-[calc(100%-147px)] xl:h-full px-4 xl:px-[70px] xl:pt-13 pb-1 xl:pb-5 flex flex-col gap-4.5 overflow-y-auto">
         <SearchBar />
         {children}
       </main>

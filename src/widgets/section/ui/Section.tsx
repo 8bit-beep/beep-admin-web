@@ -21,7 +21,7 @@ const Section = ({
 }: Props) => {
   return (
     <section className="w-full flex-1 min-h-0 bg-static-white pt-5 flex flex-col gap-3 xl:gap-5 rounded-large xl:rounded-t-large xl:rounded-b-none shadow-modal overflow-hidden">
-      <header className="h-11.5 flex items-center gap-2 xl:gap-4 pr-2 pl-4 xl:pr-10 xl:pl-10">
+      <header className="h-11.5 flex items-center gap-2 xl:gap-4 pr-6 pl-8 xl:pr-10 xl:pl-10">
         <div className="text-static-dark">{icon}</div>
         <div className="flex-1 flex flex-col">
           <h2 className="xl:text-h2 text-h3 text-static-black font-semibold">
