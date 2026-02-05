@@ -12,7 +12,7 @@ const SearchBar = ({ onlyMobile }: SearchBarProps) => {
 
   return (
     <div
-      className={`w-full h-11 bg-static-white rounded-large shadow-modal flex items-center px-5 gap-3 ${
+      className={`w-full h-12 bg-static-white rounded-large shadow-modal flex items-center px-5 gap-3 ${
         onlyMobile ? "flex xl:hidden" : "hidden xl:flex"
       }`}
     >

@@ -1,17 +1,19 @@
 import SearchBar from "@/features/search/ui/SearchBar";
-import AuthProvider from "@/shared/provider/AuthProvider";
+import Header from "@/widgets/header/ui/Header";
 import Sidebar from "@/widgets/sidebar/ui/Sidebar";
+import Tabbar from "@/widgets/tabbar/ui/Tabbar";
 import { PropsWithChildren } from "react";
 
 export default function MainLayout({ children }: PropsWithChildren) {
   return (
-    <div className="w-full h-screen flex items-start">
-      <AuthProvider />
+    <div className="w-full h-svh flex items-start flex-col xl:flex-row overflow-hidden">
       <Sidebar />
-      <div className="flex-1 px-13 pt-13 flex flex-col gap-4.5">
+      <Header />
+      <main className="w-full flex-1 h-[calc(100%-147px)] xl:h-full px-[70px] xl:px-13 pb-1 xl:pb-5 flex flex-col gap-4.5 overflow-y-auto">
         <SearchBar />
-        <main className="w-full h-[calc(100vh-114px)]">{children}</main>
-      </div>
+        {children}
+      </main>
+      <Tabbar />
     </div>
   );
 }
