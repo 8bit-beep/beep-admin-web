@@ -11,7 +11,8 @@ const MobileDeleteAttendType = ({ attendTypeId }: Props) => {
   return (
     <Button
       buttonSize="small"
-      buttonType="dangerText"
+      buttonType="text"
+      style={{color: '#B03D35'}} // 임시방편
       onClick={() =>
         modal.open({
           title: "출석 종류를 삭제하시겠습니까?",
