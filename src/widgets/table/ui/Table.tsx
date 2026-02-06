@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { TableHeader } from "../types/table-header"
+import { TableHeader } from "../types/table-header";
 
 interface Props {
   header: TableHeader[];
@@ -16,7 +16,7 @@ const Table = ({ header, rows }: Props) => {
               <th
                 key={index}
                 style={{ width: col.width }}
-                className="text-left py-3 bg-blue-light text-static-white text-h4"
+                className="text-left py-3 bg-blue-light text-static-white text-h4 break-keep"
               >
                 {col.title}
               </th>
@@ -26,9 +26,30 @@ const Table = ({ header, rows }: Props) => {
       </table>
       <div className="w-full h-full overflow-y-auto">
         <table className="w-full border-collapse table-auto">
-          <tbody>
+          <tbody className="table-row-group xl:hidden">
             {rows.map((row, rowIndex) => (
-              <tr key={rowIndex} className="[&_td:first-child]:pl-10 [&_td:last-child]:pr-10">
+              <tr
+                key={rowIndex}
+                className="[&_td:first-child]:pl-10 [&_td:last-child]:pr-0"
+              >
+                {row.map((cell, cellIndex) => (
+                  <td
+                    key={cellIndex}
+                    className="h-12 text-h4 text-static-black break-keep"
+                    style={{ width: header[cellIndex]?.width }}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+          <tbody className="hidden xl:table-row-group">
+            {rows.map((row, rowIndex) => (
+              <tr
+                key={rowIndex}
+                className="[&_td:first-child]:pl-10 [&_td:last-child]:pr-10"
+              >
                 {row.map((cell, cellIndex) => (
                   <td
                     key={cellIndex}
@@ -44,7 +65,7 @@ const Table = ({ header, rows }: Props) => {
         </table>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Table
+export default Table;
