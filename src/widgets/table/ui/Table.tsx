@@ -28,7 +28,7 @@ const Table = ({ header, rows }: Props) => {
         <table className="w-full border-collapse table-auto">
           <tbody>
             {rows.map((row, rowIndex) => (
-              <tr key={rowIndex} className="[&_td:first-child]:pl-10 [&_td:last-child]:pr-10">
+              <tr key={rowIndex} className="[&_td:first-child]:pl-10 [&_td:last-child]:xl:pr-10">
                 {row.map((cell, cellIndex) => (
                   <td
                     key={cellIndex}

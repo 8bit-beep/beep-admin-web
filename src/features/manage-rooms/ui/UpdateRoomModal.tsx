@@ -2,8 +2,9 @@
 
 import { Room } from "@/entities/rooms/types";
 import { FLOOR_OPTIONS } from "@/features/filter/constants/floor";
-import { Button, Dropdown, TextInput } from "@bds-web/ui";
+import { Button, Dropdown, TextInput, modal } from "@bds-web/ui";
 import { useUpdateRoom } from "../hooks/useUpdateRoom";
+import DeleteRoomModal from "./DeleteRoomModal";
 
 interface Props {
   data: Room;
@@ -57,9 +58,25 @@ const UpdateRoomModal = ({ data }: Props) => {
         buttonSize="large"
         buttonType="primary"
         type="submit"
-        disabled={disabled}>
+        disabled={disabled}
+      >
         추가하기
       </Button>
+      <div className="w-full xl:hidden [&>button]:w-full">
+        <Button
+          buttonSize="large"
+          buttonType="danger"
+          type="button"
+          onClick={() =>
+            modal.open({
+              title: "실 정보를 삭제하시겠습니까?",
+              content: <DeleteRoomModal roomId={data.id} />,
+            })
+          }
+        >
+          삭제하기
+        </Button>
+      </div>
     </form>
   );
 };
