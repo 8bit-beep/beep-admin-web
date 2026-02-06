@@ -7,32 +7,46 @@ import Image from "next/image";
 import { DAYS } from "../constants/days";
 import ScheduleItem from "./ScheduleItem";
 import { useUpdateStudnet } from "../hooks/useUpdateStudent";
+import DeleteStudentModal from "./DeleteStudentModal";
 
 interface Props {
-  data: Student;
+  student: Student;
 }
 
-const UpdateStudentModal = ({ data }: Props) => {
-  const { day, setDay, filteredData } = useUpdateStudnet(data.id);
+const MobileUpdateStudentModal = ({ student }: Props) => {
+  const { day, setDay, filteredData } = useUpdateStudnet(student.id);
 
   return (
-    <div className="w-176 flex flex-col gap-5">
+    <div className="w-172 flex flex-col gap-4">
       <header className="w-full flex items-center gap-3">
         <Image
-          src={data.profileImageUrl || "/default-profile.svg"}
-          alt={`${data.username}의 프로필 사진`}
+          src={student.profileImageUrl || "/default-profile.svg"}
+          alt={`${student.username}의 프로필 사진`}
           width={64}
           height={64}
           className="w-16 h-16 rounded-full"
           loading="eager"
         />
         <div className="flex-1">
-          <h3 className="text-h3">{data.username}</h3>
-          <p className="text-body">{data.email}</p>
+          <h3 className="text-h3">{student.username}</h3>
+          <p className="text-body">{student.email}</p>
         </div>
-        <p className="text-body">
-          {data.studentInfo.grade}학년 {data.studentInfo.classNumber}반{" "}
-          {data.studentInfo.num}번
+        <p className="text-body flex items-center gap-2">
+          {student.studentInfo.grade}학년 {student.studentInfo.classNumber}반{" "}
+          {student.studentInfo.num}번
+          <Button
+            buttonSize="small"
+            buttonType="text"
+            style={{ color: '#EF4444' }}
+            onClick={() =>
+              modal.open({
+                title: "학생 계정 삭제",
+                content: <DeleteStudentModal studentId={student.id} />,
+              })
+            }
+          >
+            계정 삭제하기
+          </Button>
         </p>
       </header>
       <section className="w-full flex flex-col gap-3">
@@ -49,7 +63,11 @@ const UpdateStudentModal = ({ data }: Props) => {
             </p>
           )}
         </div>
-        <Button buttonSize="large" buttonType="primary" onClick={() => modal.close()}>
+        <Button
+          buttonSize="large"
+          buttonType="primary"
+          onClick={() => modal.close()}
+        >
           수정 완료
         </Button>
       </section>
@@ -57,4 +75,4 @@ const UpdateStudentModal = ({ data }: Props) => {
   );
 };
 
-export default UpdateStudentModal;
+export default MobileUpdateStudentModal;

@@ -1,6 +1,6 @@
 import { StudentApi } from "@/entities/students/api";
 import FilterStudent from "@/features/filter/ui/FilterStudent";
-import ManageStudent from "@/features/manage-students/ui/ManageStudent";
+import MobileManageStudent from "@/features/manage-students/ui/MobileManageStudent";
 import PersonIcon from "@/shared/icons/PersonIcon";
 import { SearchParams } from "@/shared/types/search-params";
 import { pad } from "@/shared/utils/pad";
@@ -33,7 +33,7 @@ export default async function StudentsPage({
           `${student.studentInfo.grade}${student.studentInfo.classNumber}${pad(student.studentInfo.num, 2)}`,
           student.username,
           student.email,
-          <ManageStudent key={student.id} data={student} />,
+          <MobileManageStudent key={student.id} data={student} />,
         ])}
       />
     </Section>
