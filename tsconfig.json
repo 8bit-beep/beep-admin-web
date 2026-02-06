@@ -29,7 +29,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "src/features/manage-students/ui/MobileUpdateStudentModal"
   ],
   "exclude": ["node_modules"]
 }

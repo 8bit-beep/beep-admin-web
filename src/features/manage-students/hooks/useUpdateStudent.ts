@@ -7,8 +7,8 @@ import { useGetSchedulesByUserId } from "@/entities/schedules/queries";
 
 export const useUpdateStudnet = (userId: number) => {
   const [day, setDay] = useState<SegmentItem>(DAYS[0]);
-  const { data: schedulesResponse } = useGetSchedulesByUserId(userId);
-  const data = schedulesResponse?.data || []; 
+  const { data: res } = useGetSchedulesByUserId(userId);
+  const { data } = res; 
   const filteredData =
     day.value === "ALL"
       ? data
