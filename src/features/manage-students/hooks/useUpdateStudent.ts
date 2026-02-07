@@ -1,3 +1,5 @@
+"use client";
+
 import { SegmentItem } from "@/shared/types/segment-item";
 import { useState } from "react";
 import { DAYS } from "../constants/days";
