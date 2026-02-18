@@ -3,11 +3,11 @@
 import SearchIcon from "@/shared/icons/SearchIcon";
 import { useSearch } from "../hooks/useSearch";
 
-type SearchBarProps = {
+interface Props {
   onlyMobile?: boolean;
-};
+}
 
-const SearchBar = ({ onlyMobile }: SearchBarProps) => {
+const SearchBar = ({ onlyMobile }: Props) => {
   const { query, onChange, onEnter } = useSearch();
 
   return (
