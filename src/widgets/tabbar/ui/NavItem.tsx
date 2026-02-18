@@ -21,7 +21,7 @@ const NavItem = ({ icon, label, path }: Props) => {
       <div className="w-6 h-6 flex items-center justify-center">
         {icon}
       </div>
-      <p className="text-[16px] whitespace-nowrap">{label}</p>
+      <p className="text-[14px] whitespace-nowrap">{label}</p>
     </Link>
   );
 };
