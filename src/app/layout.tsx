@@ -24,8 +24,8 @@ export default function RootLayout({
         <BdsRegistry>
           <QueryProvider>
             <ModalProvider />
-            <div id="__next" className="xl:pb-[56px]">
-              <main className="xl:pb-[90px] box-border">{children}</main>
+            <div className="xl:pb-14">
+              <main className="xl:pb-22.5 box-border">{children}</main>
             </div>
           </QueryProvider>
         </BdsRegistry>
