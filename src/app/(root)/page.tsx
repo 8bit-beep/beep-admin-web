@@ -12,7 +12,8 @@ export default async function HomePage({
 }: SearchParams<{ floor?: string }>) {
   const { floor } = await searchParams;
   const floorParam =
-    floor === "others" ? "4" : floor === "all" ? undefined : floor;
+    floor === "others" ? "others" : floor === "all" ? undefined : floor;
+    
   const { data } = await RoomApi.getRooms(floorParam);
 
   return (
