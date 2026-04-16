@@ -11,7 +11,7 @@ export const LimitedUserApi = {
       return [];
     }
     return (await api.get<LimitedUser[]>("/limited-users")).data.filter((user) =>
-      user.email.toLowerCase().includes(query.toLowerCase()),
+      user.username.toLowerCase().includes(query.toLowerCase()),
     );
   },
 

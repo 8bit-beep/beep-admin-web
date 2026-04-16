@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export default function LoginPage() {
   const {
-    email,
-    setEmail,
+    username,
+    setUsername,
     password,
     setPassword,
     error,
@@ -29,11 +29,11 @@ export default function LoginPage() {
         />
         <h1 className="text-h2">삑 어드민 로그인</h1>
         <TextInput
-          label="Email"
-          type="email"
-          placeholder="example@email.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          label="Username"
+          type="text"
+          placeholder="type your username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
         <TextInput
           label="Password"

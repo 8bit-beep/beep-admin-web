@@ -26,13 +26,13 @@ export default async function StudentsPage({
         header={[
           { title: "학번", width: "124px" },
           { title: "이름", width: "112px" },
-          { title: "이메일" },
+          { title: "유저네임" },
           { title: "", width: "240px" },
         ]}
         rows={data.map((student) => [
           `${student.studentInfo.grade}${student.studentInfo.classNumber}${pad(student.studentInfo.num, 2)}`,
           student.username,
-          student.email,
+          student.username,
           <ManageStudent key={student.id} data={student} />,
         ])}
       />
