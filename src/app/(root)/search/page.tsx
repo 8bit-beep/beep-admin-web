@@ -50,7 +50,7 @@ export default async function SearchPage({ searchParams }: SearchParams<{ query?
               <li key={student.id} className="flex items-center gap-2 p-2 bg-greyscale-10 rounded">
                 <div className="flex-1">
                   <div className="font-bold">{student.username}</div>
-                  <div className="text-sm text-greyscale-40">{student.email}</div>
+                  <div className="text-sm text-greyscale-40">{student.username}</div>
                   <div className="text-xs text-greyscale-40">
                     {student.studentInfo.grade}학년 {student.studentInfo.classNumber}반 {student.studentInfo.num}번
                   </div>
@@ -93,7 +93,7 @@ export default async function SearchPage({ searchParams }: SearchParams<{ query?
           <ul className="space-y-2">
             {limitedUsers.map((user) => (
               <li key={user.id} className="flex items-center gap-2 p-2 bg-greyscale-10 rounded">
-                <span className="flex-1">{user.email}</span>
+                <span className="flex-1">{user.username}</span>
                 <DeleteLimitedUser limitedUserId={user.id} />
               </li>
             ))}

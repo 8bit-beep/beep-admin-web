@@ -11,7 +11,7 @@ export const StudentApi = {
       return [];
     }
     return (await api.get<Student[]>("/students")).data.filter((student) =>
-      student.username.toLowerCase().includes(query.toLowerCase()) || student.email.toLowerCase().includes(query.toLowerCase()),
+      student.username.toLowerCase().includes(query.toLowerCase()),
     );
   },
 

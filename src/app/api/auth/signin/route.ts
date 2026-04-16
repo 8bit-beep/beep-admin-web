@@ -4,14 +4,14 @@ import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  const { email, password } = await req.json();
+  const { username, password } = await req.json();
   const cookieStore = await cookies();
 
   try {
     const res = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/auth/signin`,
       {
-        email,
+        username,
         password,
       },
     );

@@ -28,7 +28,7 @@ const UpdateStudentModal = ({ data }: Props) => {
         />
         <div className="flex-1">
           <h3 className="text-h3">{data.username}</h3>
-          <p className="text-body">{data.email}</p>
+          <p className="text-body">{data.username}</p>
         </div>
         <p className="text-body">
           {data.studentInfo.grade}학년 {data.studentInfo.classNumber}반{" "}
