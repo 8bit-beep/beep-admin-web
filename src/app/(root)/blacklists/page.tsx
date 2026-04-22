@@ -15,8 +15,8 @@ export default async function BlacklistsPage() {
       icon={<ExcludedIcon size={24} />}
       headerOptions={<CreateLimitedUser />}>
       <Table
-        header={[{ title: "이메일" }, { title: "", width: "117px" }]}
-        rows={data.map((user) => [user.email, <DeleteLimitedUser key={user.id} limitedUserId={user.id} />])}
+        header={[{ title: "유저네임" }, { title: "", width: "117px" }]}
+        rows={data.map((user) => [user.username, <DeleteLimitedUser key={user.id} limitedUserId={user.id} />])}
       />
     </Section>
   );

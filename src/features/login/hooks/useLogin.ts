@@ -4,7 +4,7 @@ import axios, { AxiosError } from "axios";
 import { FormEvent, useState } from "react";
 
 export const useLogin = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -18,7 +18,7 @@ export const useLogin = () => {
       const { data } = await axios.post(
         "/api/auth/signin",
         {
-          email,
+          username,
           password,
         },
         { withCredentials: true },
@@ -39,11 +39,11 @@ export const useLogin = () => {
     }
   };
 
-  const disabled = isLoading || !email.trim() || !password.trim();
+  const disabled = isLoading || !username.trim() || !password.trim();
 
   return {
-    email,
-    setEmail,
+    username,
+    setUsername,
     password,
     setPassword,
     error,
