@@ -3,11 +3,19 @@
 import SearchIcon from "@/shared/icons/SearchIcon";
 import { useSearch } from "../hooks/useSearch";
 
-const SearchBar = () => {
+interface Props {
+  onlyMobile?: boolean;
+}
+
+const SearchBar = ({ onlyMobile }: Props) => {
   const { query, onChange, onEnter } = useSearch();
 
   return (
-    <div className="w-full h-11 bg-static-white rounded-large shadow-modal flex items-center px-5 gap-3">
+    <div
+      className={`w-full h-12 bg-static-white rounded-large shadow-modal flex items-center px-5 gap-3 ${
+        onlyMobile ? "flex xl:hidden" : "hidden xl:flex"
+      }`}
+    >
       <SearchIcon className="m-1.75 text-greyscale-40" />
       <input
         type="text"

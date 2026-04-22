@@ -14,7 +14,8 @@ const CreateLimitedUser = () => {
           content: <CreateLimitedUserModal />,
         })
       }>
-      제한된 사용자 추가하기
+      <p className="xl:hidden">제한된 사용자 추가</p>
+      <p className="hidden xl:inline">제한된 사용자 추가하기</p>
     </Button>
   );
 };
