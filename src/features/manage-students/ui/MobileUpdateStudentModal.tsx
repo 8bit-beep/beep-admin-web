@@ -29,7 +29,6 @@ const MobileUpdateStudentModal = ({ student }: Props) => {
         />
         <div className="flex-1">
           <h3 className="text-h3">{student.username}</h3>
-          <p className="text-body">{student.email}</p>
         </div>
         <p className="text-body flex items-center gap-2">
           {student.studentInfo.grade}학년 {student.studentInfo.classNumber}반{" "}
