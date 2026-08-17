@@ -19,15 +19,15 @@ const UpdateStudentModal = ({ data }: Props) => {
     <div className="w-176 flex flex-col gap-5">
       <header className="w-full flex items-center gap-3">
         <Image
-          src={data.profileImageUrl || "/default-profile.svg"}
-          alt={`${data.username}의 프로필 사진`}
+          src={data.profileImage || "/default-profile.svg"}
+          alt={`${data.name}의 프로필 사진`}
           width={64}
           height={64}
           className="w-16 h-16 rounded-full"
           loading="eager"
         />
         <div className="flex-1">
-          <h3 className="text-h3">{data.username}</h3>
+          <h3 className="text-h3">{data.name}</h3>
           <p className="text-body">{data.username}</p>
         </div>
         <p className="text-body">
