@@ -31,7 +31,7 @@ export default async function StudentsPage({
         ]}
         rows={data.map((student) => [
           `${student.studentInfo.grade}${student.studentInfo.classNumber}${pad(student.studentInfo.num, 2)}`,
-          student.username,
+          student.name,
           student.username,
           <ManageStudent key={student.id} data={student} />,
         ])}

@@ -1,7 +1,8 @@
 export interface Student {
   id: number;
   username: string;
-  profileImageUrl: string | null;
+  name: string;
+  profileImage: string | null;
   studentInfo: StudentInfo;
 }
 
