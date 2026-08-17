@@ -5,6 +5,7 @@ import ExcludedIcon from "@/shared/icons/ExcludedIcon";
 import LabIcon from "@/shared/icons/LabIcon";
 import OkIcon from "@/shared/icons/OkIcon";
 import PersonIcon from "@/shared/icons/PersonIcon";
+import PinIcon from "@/shared/icons/PinIcon";
 import Image from "next/image";
 import NavItem from "./NavItem";
 import { Link } from "@cher1shrxd/loading";
@@ -23,6 +24,11 @@ const ROUTES = [
     icon: <ExcludedIcon size={16} />,
   },
   { label: "출석 종류", path: "/attend-types", icon: <OkIcon size={16} /> },
+  {
+    label: "활동실 관리",
+    path: "/activity-rooms",
+    icon: <PinIcon size={16} />,
+  },
 ];
 
 const Sidebar = () => {
