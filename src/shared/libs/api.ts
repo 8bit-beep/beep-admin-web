@@ -22,7 +22,6 @@ let queue: Array<(token?: string) => void> = [];
 
 api.interceptors.response.use(
   (res) => {
-    console.log("response success interceptor", res.data);
     return res;
   },
   async (error: AxiosError) => {
@@ -66,7 +65,6 @@ api.interceptors.response.use(
         }
       } 
 
-      console.log("refresh response", await refreshRes.text());
       const { accessToken } = await refreshRes.json();
 
       queue.forEach((cb) => cb(accessToken));
