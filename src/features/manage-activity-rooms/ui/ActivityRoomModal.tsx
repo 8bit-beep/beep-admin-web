@@ -17,8 +17,16 @@ interface Props {
 
 const ActivityRoomModal = ({ data }: Props) => {
   const rooms = useGetRooms().data.data;
-  const { fixedTypes, fixedSelection, dailySelection, selectFixed, selectDaily } =
-    useActivityRoomSelection(data.id);
+  const {
+    fixedTypes,
+    fixedSelection,
+    dailySelection,
+    isChanged,
+    isPending,
+    selectFixed,
+    selectDaily,
+    save,
+  } = useActivityRoomSelection(data.id);
 
   const options: DropdownItem[] = [
     { name: UNASSIGNED_LABEL, value: UNASSIGNED_VALUE },
@@ -93,9 +101,13 @@ const ActivityRoomModal = ({ data }: Props) => {
           ))}
         </div>
       </section>
-      {/* 저장은 고정활동실 dayOfWeek 규약이 백엔드와 확정된 뒤 연결한다 */}
-      <Button buttonType="primary" buttonSize="medium" disabled style={{ width: "100%" }}>
-        수정 완료
+      <Button
+        buttonType="primary"
+        buttonSize="medium"
+        disabled={!isChanged || isPending}
+        onClick={save}
+        style={{ width: "100%" }}>
+        {isPending ? "수정 중..." : "수정 완료"}
       </Button>
     </div>
   );

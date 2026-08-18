@@ -4,13 +4,13 @@ import { Day } from "@/shared/types/day";
 
 export interface StudentActivityRoom {
   id: number;
-  dayOfWeek: Day;
+  dayOfWeek: Day | null;
   type: AttendType;
   room: Room;
 }
 
 export interface StudentActivityRoomRequest {
-  dayOfWeek: Day;
+  dayOfWeek: Day | null;
   typeId: number;
   roomId: number;
 }

@@ -1,6 +1,5 @@
 import { Day } from "@/shared/types/day";
 
-// 백엔드에 활동 타입 구분자가 아직 없어 이름 기준으로 임시 분류한다
 export const FIXED_ACTIVITY_TYPE_NAMES = ["나르샤", "동아리"];
 export const AFTERSCHOOL_TYPE_NAME = "방과후";
 
