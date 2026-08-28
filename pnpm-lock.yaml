@@ -8,21 +8,21 @@ importers:
 
   .:
     dependencies:
-      '@bds-web/colors':
+      '@beep-ds/colors':
         specifier: ^1.1.0
         version: 1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@bds-web/shapes':
+      '@beep-ds/shapes':
         specifier: ^1.1.0
         version: 1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@bds-web/themes':
+      '@beep-ds/themes':
         specifier: ^1.0.0
         version: 1.0.0(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3))(next@16.1.3(@babel/core@7.28.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@bds-web/typography':
+      '@beep-ds/typography':
         specifier: ^1.1.0
         version: 1.1.0(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@bds-web/ui':
-        specifier: ^1.19.0
-        version: 1.19.0(8ff69d366277e0ad2f75b43616cdbe4a)
+      '@beep-ds/ui':
+        specifier: ^1.21.0
+        version: 1.21.0(p33q66pi4d6mtoqqqw7r2i5gi4)
       '@cher1shrxd/loading':
         specifier: ^1.0.3
         version: 1.0.3(next@16.1.3(@babel/core@7.28.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(zustand@5.0.10(@types/react@19.2.8)(react@19.2.3))
@@ -159,20 +159,20 @@ packages:
     resolution: {integrity: sha512-0ZrskXVEHSWIqZM/sQZ4EV3jZJXRkio/WCxaqKZP1g//CEWEPSfeZFcms4XeKBCHU0ZKnIkdJeU/kF+eRp5lBg==}
     engines: {node: '>=6.9.0'}
 
-  '@bds-web/colors@1.1.0':
-    resolution: {integrity: sha512-+OZbTuLggo38yJXD4fFUAHt+yXVpMFHwr72BfSRivfa6nTf7gsHzC8NMF6/mDIN+6sFDMRFgdICcwuce5ruWqA==}
+  '@beep-ds/colors@1.1.0':
+    resolution: {integrity: sha512-Y7bqSMgcDx3k5BBjiQXLSMR4Z2B735K33cVYeB6J0HikNvduOaCHw6IU8RxCnIakADgaT+INCnYyTNaoq+B1Iw==}
     peerDependencies:
       react: '>=19'
       react-dom: '>=19'
 
-  '@bds-web/shapes@1.1.0':
-    resolution: {integrity: sha512-3Muzgk2SdAE6OBfj9Tnv84KMcxbGyf7cYkXYhwhobLRrexwMy5WCYY7OoLASuo0+FpTqTagO2SVJYOjvSnmFig==}
+  '@beep-ds/shapes@1.1.0':
+    resolution: {integrity: sha512-u8/xV9dx3RAuGWCBlJJDO5CjoZfBVpY4zB0gvx2uT1CvYeWdYFoo6oqpsqAO0e5MrYui9WaatEvfdIzCI7oXlA==}
     peerDependencies:
       react: '>=19'
       react-dom: '>=19'
 
-  '@bds-web/themes@1.0.0':
-    resolution: {integrity: sha512-6EmT8Hh5y/EFMC97fenUAdPlebMbMotRX9HBnKzwhKLsvp2rbnXauykByf7g2+ONiQPp39D8OkgCP1xbuP6FKg==}
+  '@beep-ds/themes@1.0.0':
+    resolution: {integrity: sha512-pgi2d65qAQxMV8+cnwSurJiviavmoao5XbSRS9Wgdjh3H+rUv2WYDcfwnlsmqAP6QpxyZElOjFPsLwBJwKEQTQ==}
     peerDependencies:
       '@emotion/react': ^11.14.0
       '@emotion/styled': ^11.14.1
@@ -180,21 +180,21 @@ packages:
       react: '>=19'
       react-dom: '>=19'
 
-  '@bds-web/typography@1.1.0':
-    resolution: {integrity: sha512-Sl8IEkgcMqzsfQJtImvrjQyMCf26xFAXuxAenmD5Q/1lvBXnhCUe2t5GdlPb5bIbZvcQnq9fUzBaM/Ce3IfN7g==}
+  '@beep-ds/typography@1.1.0':
+    resolution: {integrity: sha512-1vSBlwHxEhFiSqZSyNC5aesCHfS7MmmOeSNS6EFXcrmOXSfUrhcYAx9wrmSU2vJavTNiKD2MBejdIqo4ac4pYg==}
     peerDependencies:
       '@emotion/react': ^11.14.0
       '@emotion/styled': ^11.14.1
       react: '>=19'
       react-dom: '>=19'
 
-  '@bds-web/ui@1.19.0':
-    resolution: {integrity: sha512-gVzHkBQJ5jVdFyGHfFCuTDpXcXGdR4WV6ctkCvaJIvdENuKo7xffHjY6+27fFqQoxtbFZrhkCHVRT3Je0mvv4g==}
+  '@beep-ds/ui@1.21.0':
+    resolution: {integrity: sha512-YIjOzmq5sz45ZbZzlv9NkH2wjuY3M9eTvzIGzuS4RamaJJLDcdmeZhZlS/NpJEwSxh29Za1NxlfhOTL70TEBvA==}
     peerDependencies:
-      '@bds-web/colors': ^1.1.0
-      '@bds-web/shapes': ^1.1.0
-      '@bds-web/themes': ^1.0.0
-      '@bds-web/typography': ^1.1.0
+      '@beep-ds/colors': ^1.1.0
+      '@beep-ds/shapes': ^1.1.0
+      '@beep-ds/themes': ^1.0.0
+      '@beep-ds/typography': ^1.1.0
       '@emotion/cache': ^11.14.0
       '@emotion/react': ^11.14.0
       '@emotion/styled': ^11.14.1
@@ -2297,17 +2297,17 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@bds-web/colors@1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@beep-ds/colors@1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 
-  '@bds-web/shapes@1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@beep-ds/shapes@1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 
-  '@bds-web/themes@1.0.0(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3))(next@16.1.3(@babel/core@7.28.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@beep-ds/themes@1.0.0(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3))(next@16.1.3(@babel/core@7.28.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.8)(react@19.2.3)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3)
@@ -2315,19 +2315,19 @@ snapshots:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 
-  '@bds-web/typography@1.1.0(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@beep-ds/typography@1.1.0(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.8)(react@19.2.3)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3)
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 
-  '@bds-web/ui@1.19.0(8ff69d366277e0ad2f75b43616cdbe4a)':
+  '@beep-ds/ui@1.21.0(p33q66pi4d6mtoqqqw7r2i5gi4)':
     dependencies:
-      '@bds-web/colors': 1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@bds-web/shapes': 1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@bds-web/themes': 1.0.0(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3))(next@16.1.3(@babel/core@7.28.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@bds-web/typography': 1.1.0(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@beep-ds/colors': 1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@beep-ds/shapes': 1.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@beep-ds/themes': 1.0.0(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3))(next@16.1.3(@babel/core@7.28.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@beep-ds/typography': 1.1.0(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@emotion/cache': 11.14.0
       '@emotion/react': 11.14.0(@types/react@19.2.8)(react@19.2.3)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.8)(react@19.2.3))(@types/react@19.2.8)(react@19.2.3)

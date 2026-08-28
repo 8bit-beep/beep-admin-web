@@ -2,7 +2,7 @@
 
 import { Room } from "@/entities/rooms/types";
 import { FLOOR_OPTIONS } from "@/features/filter/constants/floor";
-import { Button, Dropdown, TextInput } from "@bds-web/ui";
+import { Button, Dropdown, TextInput } from "@beep-ds/ui";
 import { useUpdateRoom } from "../hooks/useUpdateRoom";
 
 interface Props {

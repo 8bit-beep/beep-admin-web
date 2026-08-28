@@ -1,7 +1,7 @@
 "use client";
 
 import { Student } from "@/entities/students/types";
-import { Button, modal } from "@bds-web/ui";
+import { Button, modal } from "@beep-ds/ui";
 import UpdateStudentModal from "./UpdateStudentModal";
 import DeleteStudentModal from "./DeleteStudentModal";
 

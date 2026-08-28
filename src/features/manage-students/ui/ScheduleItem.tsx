@@ -2,7 +2,7 @@
 
 import { Schedule } from "@/entities/schedules/types";
 import { parseDay } from "@/shared/utils/parse-day";
-import { Dropdown } from "@bds-web/ui";
+import { Dropdown } from "@beep-ds/ui";
 import { useUpdateSchedule } from "../hooks/useUpdateSchedule";
 
 interface Props {

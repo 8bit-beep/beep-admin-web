@@ -2,7 +2,7 @@
 
 import { Student } from "@/entities/students/types";
 import Segment from "@/shared/ui/Segment";
-import { Button, modal } from "@bds-web/ui";
+import { Button, modal } from "@beep-ds/ui";
 import Image from "next/image";
 import { DAYS } from "../constants/days";
 import ScheduleItem from "./ScheduleItem";

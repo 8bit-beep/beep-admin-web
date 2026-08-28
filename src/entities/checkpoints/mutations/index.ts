@@ -2,7 +2,7 @@ import { useRouter } from "@cher1shrxd/loading";
 import { useMutation } from "@tanstack/react-query";
 import { CheckpointApi } from "../api";
 import { toast } from "@cher1shrxd/toast";
-import { modal } from "@bds-web/ui";
+import { modal } from "@beep-ds/ui";
 
 export const useCreateCheckpointMutation = () => {
   const router = useRouter();

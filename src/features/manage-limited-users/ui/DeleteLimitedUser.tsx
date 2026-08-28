@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, modal } from "@bds-web/ui";
+import { Button, modal } from "@beep-ds/ui";
 import DeleteLimitedUserModal from "./DeleteLimitedUserModal";
 
 interface Props {

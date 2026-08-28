@@ -1,4 +1,4 @@
-import { DropdownItem } from "@bds-web/ui";
+import { DropdownItem } from "@beep-ds/ui";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { GRADE_OPTIONS } from "../constants/grade";

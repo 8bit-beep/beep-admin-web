@@ -1,4 +1,4 @@
-import { DropdownItem } from "@bds-web/ui";
+import { DropdownItem } from "@beep-ds/ui";
 
 export const FLOOR_OPTIONS: DropdownItem[] = [
   { name: "1층", value: "1" },

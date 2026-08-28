@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { ScheduleApi } from "../api";
 import { toast } from "@cher1shrxd/toast";
-import { modal } from "@bds-web/ui";
+import { modal } from "@beep-ds/ui";
 
 export const useUpdateScheduleMutation = (userId: number) => {
   const queryClient = useQueryClient();

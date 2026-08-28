@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, TextInput } from "@bds-web/ui";
+import { Button, TextInput } from "@beep-ds/ui";
 import { useCreateCheckpoint } from "../hooks/useCreateCheckpoint";
 
 const CreateCheckpointModal = () => {

@@ -4,7 +4,7 @@ import { useRouter } from "@cher1shrxd/loading";
 import { toast } from "@cher1shrxd/toast";
 import { AxiosError } from "axios";
 import { Error } from "@/shared/types/error";
-import { modal } from "@bds-web/ui";
+import { modal } from "@beep-ds/ui";
 
 export const useCreateRoomMutation = () => {
   const router = useRouter();

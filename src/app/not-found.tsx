@@ -1,4 +1,4 @@
-import { Button } from "@bds-web/ui";
+import { Button } from "@beep-ds/ui";
 import Image from "next/image";
 import Link from "next/link";
 

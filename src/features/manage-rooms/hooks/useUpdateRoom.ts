@@ -1,7 +1,7 @@
 import { Room } from "@/entities/rooms/types";
 import { CLASS_OPTIONS } from "@/features/filter/constants/class";
 import { FormEvent, useState } from "react";
-import { DropdownItem } from "@bds-web/ui";
+import { DropdownItem } from "@beep-ds/ui";
 import { useUpdateRoomMutation } from "@/entities/rooms/mutations";
 
 export const useUpdateRoom = (data: Room) => {

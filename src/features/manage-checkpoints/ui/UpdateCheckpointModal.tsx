@@ -1,7 +1,7 @@
 "use client";
 
 import { Checkpoint } from "@/entities/checkpoints/types";
-import { Button, TextInput } from "@bds-web/ui";
+import { Button, TextInput } from "@beep-ds/ui";
 import { useUpdateCheckpoint } from "../hooks/useUpdateCheckpoint";
 
 interface Props {
