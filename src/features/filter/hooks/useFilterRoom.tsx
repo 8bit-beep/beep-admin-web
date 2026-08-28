@@ -1,4 +1,4 @@
-import { DropdownItem } from "@bds-web/ui";
+import { DropdownItem } from "@beep-ds/ui";
 import { useRouter } from "@cher1shrxd/loading";
 import { useEffect, useState } from "react";
 import { FLOOR_OPTIONS } from "../constants/floor";

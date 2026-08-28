@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, modal } from "@bds-web/ui";
+import { Button, modal } from "@beep-ds/ui";
 import { Checkpoint } from "@/entities/checkpoints/types";
 import UpdateCheckpointModal from "./UpdateCheckpointModal";
 import DeleteCheckpointModal from "./DeleteCheckpointModal";

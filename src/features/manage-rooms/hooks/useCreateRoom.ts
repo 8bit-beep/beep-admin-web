@@ -1,7 +1,7 @@
 import { useCreateRoomMutation } from "@/entities/rooms/mutations";
 import { CLASS_OPTIONS } from "@/features/filter/constants/class";
 import { FLOOR_OPTIONS } from "@/features/filter/constants/floor";
-import { DropdownItem } from "@bds-web/ui";
+import { DropdownItem } from "@beep-ds/ui";
 import { FormEvent, useState } from "react";
 
 export const useCreateRoom = () => {

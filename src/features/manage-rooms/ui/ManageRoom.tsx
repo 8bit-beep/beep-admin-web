@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, modal } from "@bds-web/ui";
+import { Button, modal } from "@beep-ds/ui";
 import UpdateRoomModal from "./UpdateRoomModal";
 import { Room } from "@/entities/rooms/types";
 import DeleteRoomModal from "./DeleteRoomModal";

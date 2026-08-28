@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Dropdown, DropdownItem } from "@bds-web/ui";
+import { Button, Dropdown, DropdownItem } from "@beep-ds/ui";
 import Image from "next/image";
 import { Student } from "@/entities/students/types";
 import { useGetRooms } from "@/entities/rooms/queries";

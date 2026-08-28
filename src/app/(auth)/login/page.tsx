@@ -1,7 +1,7 @@
 "use client";
 
 import { useLogin } from "@/features/login/hooks/useLogin";
-import { Button, TextInput } from "@bds-web/ui";
+import { Button, TextInput } from "@beep-ds/ui";
 import Image from "next/image";
 
 export default function LoginPage() {

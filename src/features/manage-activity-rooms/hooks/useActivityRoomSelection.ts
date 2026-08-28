@@ -1,4 +1,4 @@
-import { DropdownItem } from "@bds-web/ui";
+import { DropdownItem } from "@beep-ds/ui";
 import { useState } from "react";
 import { useUpdateActivityRoomsMutation } from "@/entities/activity-rooms/mutations";
 import { useGetActivityRooms } from "@/entities/activity-rooms/queries";

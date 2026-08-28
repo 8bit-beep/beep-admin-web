@@ -2,7 +2,7 @@ import { useGetAttendTypes } from "@/entities/attend-types/queries";
 import { useGetRooms } from "@/entities/rooms/queries";
 import { useUpdateScheduleMutation } from "@/entities/schedules/mutations";
 import { Schedule } from "@/entities/schedules/types";
-import { DropdownItem } from "@bds-web/ui";
+import { DropdownItem } from "@beep-ds/ui";
 import { useEffect, useState } from "react";
 
 export const useUpdateSchedule = (data: Schedule) => {
